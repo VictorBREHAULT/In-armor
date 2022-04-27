@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnnemyAnimationController : MonoBehaviour
+public class EnemyAnimationController : MonoBehaviour
 {//Script meant to be attached to an ennemy, controlling its animations through the Animator component
 
     private Animator animator;
@@ -11,7 +11,7 @@ public class EnnemyAnimationController : MonoBehaviour
     private GameObject player;
 
     [SerializeField]
-    private float attackRange = 2.5f;  //Maximum distance where the ennemy's attacks reach the player
+    private float attackRange = 2f;  //Maximum distance where the ennemy's attacks reach the player
         
     void Start()
     {

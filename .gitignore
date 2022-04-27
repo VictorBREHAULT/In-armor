@@ -364,8 +364,8 @@ FodyWeavers.xsd
 
 # Custom
 *.apk
-Assets/
+Assets/*
 Library/
 Packages/
 Temp/
-!./Assets/Scripts/
+!Assets/Scripts/

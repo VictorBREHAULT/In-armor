@@ -17,7 +17,7 @@ public class ForestLayoutGenerator : MonoBehaviour
 
     public int chunksToSpawn = 5;  //Number of chunks to spawn when the game starts
 
-    public List<EnnemyMotor> ennemies;
+    public List<EnemyMotor> enemies;
 
     private System.Random rand = new System.Random();  //Useful to add randomness in the spawns
 
@@ -65,16 +65,16 @@ public class ForestLayoutGenerator : MonoBehaviour
         GameObject objectFromChunk = chunkToSpawn.forestChunks[Random.Range(0, chunkToSpawn.forestChunks.Length)]; //Select one of the versions
         previousChunk = chunkToSpawn;
         Instantiate(objectFromChunk, spawnPosition + spawnOrigin, Quaternion.identity);
-
-        if (ennemies.Count > 0) // ennemies[0] = thug ; ennemies[1] = spider
+        
+        if (enemies.Count > 0) // enemies[0] = thug ; enemies[1] = spider ; enemies[2] = eagle
         {
             if (rand.Next(5) < 4)
             {
                 thugDistance = rand.Next(30) * Vector3.forward - 15 * Vector3.forward; //This vector give a random place on the path of the new chunk spawned
-                Instantiate(ennemies[0], spawnPosition + spawnOrigin + thugDistance, Quaternion.Euler(0f, 180f, 0f)); //Instantiates a thug
+                Instantiate(enemies[0], spawnPosition + spawnOrigin + thugDistance, Quaternion.Euler(0f, 180f, 0f)); //Instantiates a thug
             }            
             
-            if (ennemies[1])
+            if (enemies[1])
             {
                 numberOfSpiderOnThisChunk = rand.Next(3);
 
@@ -82,14 +82,22 @@ public class ForestLayoutGenerator : MonoBehaviour
                 {
                     if (rand.Next(2) == 1)
                     {
-                        Instantiate(ennemies[1], spawnPosition + spawnOrigin + 10 * Vector3.right + 5* i * Vector3.forward, Quaternion.Euler(0f, -90f, 0f)); //Instantiate a spider on the right       
+                        Instantiate(enemies[1], spawnPosition + spawnOrigin + 10 * Vector3.right + 5* i * Vector3.forward, Quaternion.Euler(0f, -90f, 0f)); //Instantiate a spider on the right       
                     }
                     else
                     {
-                        Instantiate(ennemies[1], spawnPosition + spawnOrigin + 10 * Vector3.left + 5 * i * Vector3.forward, Quaternion.Euler(0f, 90f, 0f)); //Instantiate a spider on the left
+                        Instantiate(enemies[1], spawnPosition + spawnOrigin + 10 * Vector3.left + 5 * i * Vector3.forward, Quaternion.Euler(0f, 90f, 0f)); //Instantiate a spider on the left
                     }
                 }                
-            }                
+            }  
+            
+            if (enemies[2])
+            {
+                //if (rand.Next(2) < 1)
+                //{
+                    Instantiate(enemies[2], spawnPosition + spawnOrigin + 5 * Vector3.up + 30 * Vector3.forward, Quaternion.Euler(0f, 180f, 0f)); //Instantiate an eagle
+                //}
+            }
         }                
     }
 

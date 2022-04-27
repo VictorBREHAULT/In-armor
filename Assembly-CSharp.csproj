@@ -57,19 +57,23 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\PlayerController.cs" />
-    <Compile Include="Assets\Scripts\EnnemyHurtedBehavior.cs" />
+    <Compile Include="Assets\Scripts\ArmorRotations.cs" />
+    <Compile Include="Assets\EgyptMonsters\Scripts\DemoController.cs" />
+    <Compile Include="Assets\Scripts\PickUpWeapon.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\PieceState.cs" />
     <Compile Include="Assets\Scripts\Tags\PlayerTag.cs" />
     <Compile Include="Assets\Scripts\PlayerHurtedBehavior.cs" />
     <Compile Include="Assets\Samples\Google Cardboard XR Plugin for Unity\1.6.0\Hello Cardboard\Scripts\CardboardStartup.cs" />
     <Compile Include="Assets\Scripts\LevelChunkData.cs" />
+    <Compile Include="Assets\Scripts\Inventory.cs" />
+    <Compile Include="Assets\EgyptMonsters\Scripts\DestroyMe.cs" />
     <Compile Include="Assets\Scripts\FloatingOrigin.cs" />
     <Compile Include="Assets\Samples\Google Cardboard XR Plugin for Unity\1.6.0\Hello Cardboard\Scripts\ObjectController.cs" />
     <Compile Include="Assets\Scripts\Tags\EnnemyTag.cs" />
-    <Compile Include="Assets\Scripts\EnnemyMotor.cs" />
+    <Compile Include="Assets\Scripts\EnemyMotor.cs" />
     <Compile Include="Assets\Scripts\StepsNoise.cs" />
-    <Compile Include="Assets\Scripts\EnnemyAnimationController.cs" />
+    <Compile Include="Assets\Scripts\EnemyAnimationController.cs" />
     <Compile Include="Assets\Scripts\PlayerMotor.cs" />
     <Compile Include="Assets\Scripts\PlayerAttackBehavior.cs" />
     <Compile Include="Assets\Scripts\LevelLayoutGenerator.cs" />
@@ -77,15 +81,23 @@
     <Compile Include="Assets\Scripts\ForestLayoutGenerator.cs" />
     <Compile Include="Assets\Scripts\ArmorNoise.cs" />
     <Compile Include="Assets\Scripts\TriggerExit.cs" />
-    <Compile Include="Assets\Scripts\EnnemyBehavior.cs" />
+    <Compile Include="Assets\Scripts\EnemyBehavior.cs" />
     <Compile Include="Assets\Scripts\ForestChunkData.cs" />
     <Compile Include="Assets\Scripts\EnnemySounds.cs" />
+    <Compile Include="Assets\EgyptMonsters\Scripts\DealDamageComponent.cs" />
     <Compile Include="Assets\Samples\Google Cardboard XR Plugin for Unity\1.6.0\Hello Cardboard\Scripts\VrModeController.cs" />
-    <Compile Include="Assets\Scripts\ArmorRotations.cs" />
+    <Compile Include="Assets\Scripts\Weapons\Weapon.cs" />
+    <Compile Include="Assets\Scripts\ArrowScript.cs" />
+    <Compile Include="Assets\HandTorch\Scripts\ToggleLight.cs" />
+    <Compile Include="Assets\HandTorch\Scripts\RotateObject.cs" />
+    <Compile Include="Assets\Scripts\DestroyItself.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\HandTorch\Credits.txt" />
+    <None Include="Assets\EgyptMonsters\README.txt" />
     <None Include="Assets\UrbanNightSky\Readme.txt" />
     <None Include="Assets\Ground materials FD\Information package.txt" />
+    <None Include="Assets\FreeWeapons\Read_me.txt" />
     <None Include="Assets\Spiders\animations list.txt" />
   </ItemGroup>
   <ItemGroup>
